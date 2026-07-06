@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>LabourLink | My Requests</title>
+
+    <link rel="stylesheet"
+          href="owner-requests.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-helmet-safety"></i>
+
+            <span>LabourLink</span>
+
+        </div>
+
+        <div class="profile-menu">
+
+            <button id="profileBtn">
+
+                <i class="fa-solid fa-user"></i>
+
+            </button>
+
+            <div class="dropdown">
+
+                <a href="owner-profile.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    My Profile
+
+                </a>
+
+                <a href="find-workers.html">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Find Workers
+
+                </a>
+
+                <a href="owner-requests.html">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    My Requests
+
+                </a>
+
+                <hr>
+
+                <a href="#" id="logoutBtn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <div class="header-content">
+
+            <h1>
+
+                <i class="fa-solid fa-list-check"></i>
+
+                My Requests
+
+            </h1>
+
+            <p>
+
+                Track all work requests you've sent to workers.
+
+            </p>
+
+        </div>
+
+    </section>
+    <div class="back-container">
+
+        <button
+            class="back-btn"
+            onclick="goBack()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+    </div>
+
+    <!-- ================= SUMMARY ================= -->
+
+    <section class="summary-section">
+
+        <div class="summary-card">
+
+            <i class="fa-solid fa-list"></i>
+
+            <h2 id="totalCount">0</h2>
+
+            <span>Total Requests</span>
+
+        </div>
+
+        <div class="summary-card upcoming">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            <h2 id="upcomingCount">0</h2>
+
+            <span>Upcoming</span>
+
+        </div>
+
+        <div class="summary-card past">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2 id="pastCount">0</h2>
+
+            <span>Past Requests</span>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FILTERS ================= -->
+
+    <section class="filter-section">
+
+        <button
+            class="filter-btn"
+            data-filter="ALL">
+
+            <i class="fa-solid fa-list"></i>
+
+            All
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="PENDING">
+
+            <i class="fa-solid fa-clock"></i>
+
+            Pending
+
+        </button>
+
+        <button
+            class="filter-btn active"
+            data-filter="ACCEPTED">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Accepted
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="REJECTED">
+
+            <i class="fa-solid fa-circle-xmark"></i>
+
+            Rejected
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="COMPLETED">
+
+            <i class="fa-solid fa-square-check"></i>
+
+            Completed
+
+        </button>
+
+    </section>
+
+    <!-- ================= REQUEST LIST ================= -->
+
+    <main class="container">
+
+    <div id="requestsContainer">
+
+        <!-- Request cards will be added here -->
+
+    </div>
+
+    <!-- Empty State -->
+
+    <div id="emptyState" style="display:none;">
+
+        <div class="empty-card">
+
+            <i class="fa-regular fa-folder-open"></i>
+
+            <h2>No Requests Found</h2>
+
+            <p>Your work requests will appear here.</p>
+
+        </div>
+
+    </div>
+
+    <!-- Back Button -->
+
+    
+
+</main>
+    
+    <script src="owner-requests.js"></script>
+
+</body>
+
+</html>

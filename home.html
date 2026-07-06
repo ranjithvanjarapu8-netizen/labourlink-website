@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>LabourLink</title>
+
+    <link rel="stylesheet" href="custom.css">
+
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-helmet-safety"></i>
+
+        <span>LabourLink</span>
+
+    </div>
+
+    <div class="nav-right">
+
+        <div class="profile-menu">
+
+            <button class="profile-btn">
+
+                <i class="fa-solid fa-user"></i>
+
+            </button>
+
+            <div class="dropdown">
+
+                <a href="owner-profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    My Profile
+                </a>
+
+                <a href="owner-requests.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    My Requests
+                </a>
+
+                <button id="logoutBtn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>Welcome Back 👋</h1>
+
+    <p>
+        Connect with skilled workers or discover nearby work opportunities.
+    </p>
+
+</section>
+
+<!-- ================= CARDS ================= -->
+
+<section class="cards">
+
+    <div class="service-card">
+
+        <div class="icon">
+
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+        <h2>Find Workers</h2>
+
+        <p>
+
+            Hire trusted electricians, plumbers, painters,
+            carpenters and many more professionals near you.
+
+        </p>
+
+        <button onclick="findWorkers()">
+
+            Find Workers
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+    <div class="service-card">
+
+        <div class="icon work">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+        </div>
+
+        <h2>Find Work</h2>
+
+        <p>
+
+            Browse nearby work opportunities and start
+            earning with trusted owners.
+
+        </p>
+
+        <button onclick="findWork()">
+
+            Find Work
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    Trusted Daily Labour Platform
+
+</footer>
+
+<script src="custom.js"></script>
+
+</body>
+</html>

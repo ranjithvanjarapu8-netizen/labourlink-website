@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Hire Workers</title>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet"
+          href="hire-requirements.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= Header ================= -->
+
+        <div class="top-bar">
+
+            <button class="back-btn" onclick="goBack()">
+                ← Back
+            </button>
+
+            <h1>Hire Workers</h1>
+
+        </div>
+
+        <!-- ================= Intro ================= -->
+
+        <div class="intro-card">
+
+            <h2>Find the Right Workers</h2>
+
+            <p>
+                Enter your work requirements to discover nearby workers available
+                for your selected profession, location and work date.
+            </p>
+
+        </div>
+
+        <!-- ================= Requirement Form ================= -->
+
+        <div class="form-card">
+
+            <!-- Profession -->
+
+            <div class="form-group">
+
+                <label for="profession">
+                    Profession
+                </label>
+
+                <select id="profession">
+
+                    <option value="">
+                        Select Profession
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Work Date -->
+
+            <div class="form-group">
+
+                <label for="workDate">
+                    Work Date
+                </label>
+
+                <input type="date"
+                       id="workDate">
+
+            </div>
+
+            <!-- Location -->
+
+            <div class="form-group">
+
+                <label for="locationSearch">
+                    Work Location
+                </label>
+
+                <div class="location-search">
+
+                    <input type="text"
+                           id="locationSearch"
+                           placeholder="Search location...">
+
+                    <button id="searchBtn">
+
+                        Search
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Map ================= -->
+
+        <div id="map"></div>
+
+        <!-- ================= Selected Location ================= -->
+
+        <div class="location-card">
+
+            <h3>Selected Location</h3>
+
+            <p id="selectedLocation">
+
+                No location selected.
+
+            </p>
+
+        </div>
+
+        <!-- ================= Continue ================= -->
+
+        <div class="button-container">
+
+            <button id="continueBtn">
+
+                Continue →
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="hire-requirements.js"></script>
+
+</body>
+
+</html>

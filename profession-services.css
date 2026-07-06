@@ -1,0 +1,301 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#1f2937;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    height:75px;
+    background:#ffffff;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar h1{
+    font-size:34px;
+    color:#2563eb;
+    font-weight:700;
+}
+
+.back-btn{
+    position:absolute;
+    left:25px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.back-btn:hover{
+    background:#1d4ed8;
+}
+
+.back-btn i{
+    font-size:15px;
+}
+
+/* ================= MAIN ================= */
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:35px auto;
+}
+
+/* ================= PROFESSION CARD ================= */
+
+.profession-card{
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    padding:35px;
+    display:flex;
+    align-items:center;
+    gap:35px;
+    margin-bottom:40px;
+}
+
+.profession-left{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.profession-icon{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    color:#fff;
+}
+
+.profession-right{
+    flex:1;
+}
+
+.profession-right h2{
+    font-size:40px;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.profession-desc{
+    color:#6b7280;
+    font-size:17px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.profession-info{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.info-box{
+    min-width:220px;
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    border-radius:12px;
+    padding:18px;
+}
+
+.info-box label{
+    display:block;
+    color:#6b7280;
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.info-box span{
+    font-size:22px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+/* ================= SECTION ================= */
+
+.section-title{
+    font-size:32px;
+    color:#111827;
+    margin-bottom:25px;
+}
+
+/* ================= SERVICES ================= */
+
+#servicesContainer{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    border-top:5px solid #2563eb;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(37,99,235,.15);
+}
+
+.service-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.service-top h3{
+    font-size:23px;
+    color:#111827;
+}
+
+.price{
+    color:#16a34a;
+    font-size:24px;
+    font-weight:700;
+}
+
+.service-middle{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:18px;
+    color:#4b5563;
+    font-size:15px;
+}
+
+.service-middle span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.service-middle i{
+    color:#2563eb;
+}
+
+.service-card p{
+    color:#6b7280;
+    line-height:1.7;
+    font-size:15px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer-card{
+    margin-top:45px;
+    background:#fff;
+    border-radius:15px;
+    padding:20px 25px;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.footer-card i{
+    color:#2563eb;
+    font-size:22px;
+    margin-top:3px;
+}
+
+.footer-card span{
+    color:#4b5563;
+    line-height:1.7;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .profession-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .profession-info{
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar h1{
+        font-size:26px;
+    }
+
+    .back-btn{
+        left:15px;
+        padding:8px 14px;
+    }
+
+    .profession-icon{
+        width:90px;
+        height:90px;
+        font-size:45px;
+    }
+
+    .profession-right h2{
+        font-size:30px;
+    }
+
+    .section-title{
+        font-size:26px;
+    }
+
+    #servicesContainer{
+        grid-template-columns:1fr;
+    }
+
+    .service-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+}

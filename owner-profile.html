@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>LabourLink | Owner Profile</title>
+
+    <link rel="stylesheet"
+          href="owner-profile.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-helmet-safety"></i>
+
+            <span>LabourLink</span>
+
+        </div>
+
+        <div class="profile-menu">
+
+            <button id="profileBtn">
+
+                <i class="fa-solid fa-user"></i>
+
+            </button>
+
+            <div class="dropdown">
+
+                <a href="owner-profile.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    My Profile
+
+                </a>
+
+                <a href="find-workers.html">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Find Workers
+
+                </a>
+
+                <a href="owner-requests.html">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    My Requests
+
+                </a>
+
+                <hr>
+
+                <a href="#" id="logoutBtn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>
+
+            <i class="fa-solid fa-user"></i>
+
+            Owner Profile
+
+        </h1>
+
+        <p>
+
+            Manage your account information and quick actions.
+
+        </p>
+
+    </section>
+    <!-- ================= BACK BUTTON ================= -->
+
+<div class="back-container">
+
+    <button
+        class="back-btn"
+        onclick="goBack()">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </button>
+
+</div>
+
+    <!-- ================= PROFILE ================= -->
+
+    <main class="container">
+
+        <section class="profile-card">
+
+            <div class="profile-left">
+
+                <img
+                    id="profileImage"
+                    src="https://placehold.co/180x180"
+                    alt="Profile">
+
+            </div>
+
+            <div class="profile-right">
+
+                <h2 id="ownerName">
+
+                    Loading...
+
+                </h2>
+
+                <div class="info">
+
+                    <p>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <strong>Phone :</strong>
+
+                        <span id="ownerPhone">-</span>
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <strong>Member Since :</strong>
+
+                        <span id="createdAt">-</span>
+
+                    </p>
+
+                </div>
+
+                <button
+                    id="editProfileBtn"
+                    class="edit-btn">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Edit Profile
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="quick-actions">
+
+            <h2>
+
+                Quick Actions
+
+            </h2>
+
+            <div class="action-grid">
+
+                <div
+                    class="action-card"
+                    onclick="location.href='hire-requirements.html'">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <h3>
+
+                        Find Workers
+
+                    </h3>
+
+                    <p>
+
+                        Search nearby skilled workers.
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="action-card"
+                    onclick="location.href='owner-requests.html'">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <h3>
+
+                        My Requests
+
+                    </h3>
+
+                    <p>
+
+                        Track your sent work requests.
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="action-card"
+                    onclick="location.href='owner-history.html'">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    <h3>
+
+                        Work History
+
+                    </h3>
+
+                    <p>
+
+                        View completed hiring history.
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="action-card logout-card"
+                    id="logoutCard">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <h3>
+
+                        Logout
+
+                    </h3>
+
+                    <p>
+
+                        Sign out of your account.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="owner-profile.js"></script>
+
+</body>
+
+</html>

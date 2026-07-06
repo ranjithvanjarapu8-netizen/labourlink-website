@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | LabourLink</title>
+
+    <link rel="stylesheet"
+          href="worker-profile.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <button class="back-btn"
+                onclick="goBack()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>My Profile</h2>
+
+        <button id="logoutBtn"
+                class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- ================= PROFILE ================= -->
+
+        <section class="profile-card">
+
+            <div class="profile-left">
+
+                <img
+                    id="workerPhoto"
+                    src="images/default-user.png"
+                    alt="Profile Photo">
+
+            </div>
+
+            <div class="profile-right">
+
+                <h1 id="workerName">
+
+                    Worker Name
+
+                </h1>
+
+                <p
+                    id="professions"
+                    class="profession">
+
+                    Electrician • Plumber
+
+                </p>
+
+                <div class="stats-row">
+
+                    <div class="stat-box">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <h3 id="rating">
+
+                            0.0
+
+                        </h3>
+
+                        <span>Rating</span>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                        <h3 id="totalJobs">
+
+                            0
+
+                        </h3>
+
+                        <span>Completed Jobs</span>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <h3>
+
+                            <span id="experience">
+
+                                0
+
+                            </span>
+
+                            Years
+
+                        </h3>
+
+                        <span>Experience</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-user"></i>
+
+                About
+
+            </h3>
+
+            <p id="description">
+
+                No description available.
+
+            </p>
+
+        </section>
+
+        <!-- ================= PROFESSIONAL DETAILS ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-id-card"></i>
+
+                Professional Details
+
+            </h3>
+
+            <div class="details-grid">
+
+                <div class="detail-item">
+
+                    <label>Phone Number</label>
+
+                    <span id="phone">
+
+                        -
+
+                    </span>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <label>Languages</label>
+
+                    <span id="languages">
+
+                        -
+
+                    </span>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <label>Joined</label>
+
+                    <span id="createdAt">
+
+                        -
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= LOCATION ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Location
+
+            </h3>
+
+            <div class="details-grid">
+
+                <div class="detail-item">
+
+                    <label>City</label>
+
+                    <span id="city">
+
+                        -
+
+                    </span>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <label>District</label>
+
+                    <span id="district">
+
+                        -
+
+                    </span>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <label>State</label>
+
+                    <span id="state">
+
+                        -
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= SKILLS ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                Skills
+
+            </h3>
+
+            <div id="skillsContainer">
+
+            </div>
+
+        </section>
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Quick Actions
+
+            </h3>
+
+            <div class="action-grid">
+
+                <button
+                    id="editProfileBtn"
+                    class="action-btn">
+
+                    <i class="fa-solid fa-user-pen"></i>
+
+                    Edit Profile
+
+                </button>
+
+                <button
+                    id="AcceptedBtn"
+                    class="action-btn">
+
+                    Accepted Works
+
+                </button>
+
+                <button
+                    id="requestsBtn"
+                    class="action-btn">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    My Requests
+
+                </button>
+
+                <button
+                    id="completedBtn"
+                    class="action-btn">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Completed Works
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="worker-profile.js"></script>
+
+</body>
+
+</html>

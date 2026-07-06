@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Work Request | LabourLink</title>
+
+    <link rel="stylesheet"
+          href="worker-request.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <button class="back-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>Work Request Details</h2>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- ================= BASIC DETAILS ================= -->
+
+        <section class="card">
+
+            <h2 id="title"></h2>
+
+            <span id="status" class="status"></span>
+
+        </section>
+
+        <!-- ================= OWNER ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-user"></i>
+
+                Owner Details
+
+            </h3>
+
+            <div class="details-grid">
+
+                <div>
+
+                    <label>Owner Name</label>
+
+                    <span id="ownerName"></span>
+
+                </div>
+
+                <div>
+
+                    <label>Phone Number</label>
+
+                    <span id="ownerPhone"></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= WORK ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                Work Details
+
+            </h3>
+
+            <div class="details-grid">
+
+                <div>
+
+                    <label>Profession</label>
+
+                    <span id="profession"></span>
+
+                </div>
+
+                <div>
+
+                    <label>Distance</label>
+
+                    <span id="distance"></span>
+
+                </div>
+
+                <div>
+
+                    <label>Work Date</label>
+
+                    <span id="workDate"></span>
+
+                </div>
+
+                <div>
+
+                    <label>Working Hours</label>
+
+                    <span id="workTime"></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= DESCRIPTION ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Description
+
+            </h3>
+
+            <p id="description"></p>
+
+        </section>
+
+        <!-- ================= LOCATION ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Work Location
+
+            </h3>
+
+            <p id="address"></p>
+
+        </section>
+
+        <!-- ================= ACTIONS ================= -->
+
+        <section class="action-buttons" id="actionButtons">
+
+            <button
+                id="acceptBtn"
+                class="accept-btn">
+
+                <i class="fa-solid fa-check"></i>
+
+                Accept
+
+            </button>
+
+            <button
+                id="rejectBtn"
+                class="reject-btn">
+
+                <i class="fa-solid fa-xmark"></i>
+
+                Reject
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="worker-request.js"></script>
+
+</body>
+
+</html>

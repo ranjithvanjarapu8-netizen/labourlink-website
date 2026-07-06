@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Worker Profile | LabourLink</title>
+
+    <link rel="stylesheet" href="worker-profile-view.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <button class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <h2>Worker Profile</h2>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- ================= PROFILE ================= -->
+
+        <section class="profile-card">
+
+            <div class="profile-left">
+
+                <img id="profilePhoto"
+                    src="images/default-user.png"
+                    alt="Worker Photo">
+
+            </div>
+
+            <div class="profile-right">
+
+                <div class="top-row">
+
+                    <div>
+
+                        <h1 id="workerName">Worker Name</h1>
+
+                        <p id="profession" class="profession">
+                            Electrician • Plumber
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="rating-row">
+
+                    <span>
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <span id="rating">4.8</span>
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                        <span id="totalJobs">145</span> Jobs
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span id="distance">2.3 km</span>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="card">
+
+            <h3>
+                <i class="fa-solid fa-user"></i>
+                About
+            </h3>
+
+            <p id="description">
+
+                No description available.
+
+            </p>
+
+        </section>
+
+        <!-- ================= PROFESSIONAL DETAILS ================= -->
+
+        <section class="card">
+
+            <h3>
+                <i class="fa-solid fa-id-card"></i>
+                Professional Details
+            </h3>
+
+            <div class="details-grid">
+
+                <div class="detail-item">
+
+                    <label>Experience</label>
+
+                    <span id="experience">5 Years</span>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <label>Languages</label>
+
+                    <span id="languages">
+                        Telugu, English
+                    </span>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <label>Joined</label>
+
+                    <span id="joined">
+                        March 2026
+                    </span>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <label>Status</label>
+
+                    <span id="availability">
+                        Available
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= LOCATION ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Location
+
+            </h3>
+
+            <div class="details-grid">
+
+                <div class="detail-item">
+
+                    <label>Village</label>
+
+                    <span id="village">
+                        Kothagudem
+                    </span>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <label>District</label>
+
+                    <span id="district">
+                        Khammam
+                    </span>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <label>State</label>
+
+                    <span id="state">
+                        Telangana
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= SKILLS ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                Skills
+
+            </h3>
+
+            <div id="skillsContainer">
+
+            </div>
+
+        </section>
+
+        <!-- ================= PRICING ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-money-check-dollar"></i>
+
+                Pricing & Services
+
+            </h3>
+
+            <p class="pricing-text">
+
+                View the service charges for each profession offered by this worker.
+
+            </p>
+
+            <div id="pricingContainer">
+
+            </div>
+
+        </section>
+
+        <!-- ================= REVIEWS ================= -->
+
+        <section class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-star"></i>
+
+                Reviews
+
+            </h3>
+
+            <div class="review-placeholder">
+
+                <i class="fa-regular fa-comments"></i>
+
+                <p>
+
+                    Reviews will be available after completing jobs.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ================= ACTIONS ================= -->
+
+        <section class="action-section">
+
+            <button class="hire-btn" onclick="openHireModal()">
+
+                <i class="fa-solid fa-handshake"></i>
+
+                Hire Worker
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- ================= HIRE WORKER MODAL ================= -->
+
+   <!-- ================= HIRE WORKER MODAL ================= -->
+
+<div id="hireModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeHireModal()">
+            &times;
+        </span>
+
+        <h2>
+
+            <i class="fa-solid fa-handshake"></i>
+
+            Hire Worker
+
+        </h2>
+
+        <!-- ================= Booking Summary ================= -->
+
+        <div class="booking-summary">
+
+            <h3>Booking Summary</h3>
+
+            <div class="summary-item">
+
+                <label>Worker</label>
+
+                <span id="summaryWorker">
+                    Worker Name
+                </span>
+
+            </div>
+
+            <div class="summary-item">
+
+                <label>Profession</label>
+
+                <span id="summaryProfession">
+                    Electrician
+                </span>
+
+            </div>
+
+            <div class="summary-item">
+
+                <label>Work Date</label>
+
+                <span id="summaryDate">
+                    10 July 2026
+                </span>
+
+            </div>
+
+            <div class="summary-item">
+
+                <label>Work Location</label>
+
+                <span id="summaryLocation">
+                    Kozhikode, Kerala
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Request Form ================= -->
+
+        <form id="hireForm">
+
+            <input
+                type="hidden"
+                id="workerId">
+
+            <!-- Work Type -->
+
+            <label>
+
+                Work Type
+
+            </label>
+
+            <select
+                id="workType"
+                required>
+
+                <option value="">
+                    Select Work Type
+                </option>
+
+            </select>
+
+            <!-- Work Title -->
+
+            <label>
+
+                Work Title
+
+            </label>
+
+            <input
+                type="text"
+                id="jobTitle"
+                placeholder="Enter work title"
+                required>
+
+            <!-- Description -->
+
+            <label>
+
+                Description
+
+            </label>
+
+            <textarea
+                id="jobDescription"
+                rows="4"
+                placeholder="Describe the work..."
+                required></textarea>
+
+            <!-- Time -->
+
+            <div class="date-time-grid">
+
+                <div>
+
+                    <label>
+
+                        Start Time
+
+                    </label>
+
+                    <input
+                        type="time"
+                        id="startTime"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label>
+
+                        End Time
+
+                    </label>
+
+                    <input
+                        type="time"
+                        id="endTime"
+                        required>
+
+                </div>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="modal-buttons">
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="closeHireModal()">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="send-btn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Send Request
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+    <script src="worker-profile-view.js"></script>
+
+</body>
+
+</html>

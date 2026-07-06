@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Become a Worker</title>
+
+    <link rel="stylesheet" href="worker-register.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Become a Worker</h1>
+
+        <p class="subtitle">
+            Complete your profile to start receiving nearby jobs.
+        </p>
+
+        <form id="workerForm">
+
+            <!-- Profile Photo -->
+
+            <div class="photo-section">
+
+                <img
+                    src="https://via.placeholder.com/140"
+                    id="photoPreview"
+                    alt="Profile Photo">
+
+                <input
+                    type="file"
+                    id="profilePhoto"
+                    accept="image/*"
+                    hidden
+                    required>
+
+                <label
+                    for="profilePhoto"
+                    class="upload-btn">
+
+                    Upload Profile Photo
+
+                </label>
+
+            </div>
+
+            <!-- Professions -->
+
+            <div class="input-group">
+
+                <label>Professions</label>
+
+                <div
+                    id="professionContainer"
+                    class="checkbox-group">
+
+                    <p>Loading professions...</p>
+
+                </div>
+
+            </div>
+
+            <!-- Experience -->
+
+            <div class="input-group">
+
+                <label>Experience (Years)</label>
+
+                <input
+                    type="number"
+                    id="experience"
+                    min="0"
+                    required>
+
+            </div>
+
+            <!-- Aadhaar -->
+
+            <div class="input-group">
+
+                <label>Aadhaar Number</label>
+
+                <input
+                    type="text"
+                    id="aadhaar"
+                    maxlength="12"
+                    placeholder="Enter Aadhaar Number"
+                    required>
+
+            </div>
+
+            <!-- Description -->
+
+            <div class="input-group">
+
+                <label>About Yourself</label>
+
+                <textarea
+                    id="description"
+                    rows="4"
+                    placeholder="Describe your work experience and skills"></textarea>
+
+            </div>
+
+            <!-- Languages -->
+
+            <div class="input-group">
+
+                <label>Languages Known</label>
+
+                <input
+                    type="text"
+                    id="languages"
+                    placeholder="Example: English, Telugu, Hindi">
+
+            </div>
+
+            <!-- City -->
+
+            <div class="input-group">
+
+                <label>City</label>
+
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="City">
+
+            </div>
+
+            <!-- District -->
+
+            <div class="input-group">
+
+                <label>District</label>
+
+                <input
+                    type="text"
+                    id="district"
+                    placeholder="District">
+
+            </div>
+
+            <!-- State -->
+
+            <div class="input-group">
+
+                <label>State</label>
+
+                <input
+                    type="text"
+                    id="state"
+                    placeholder="State">
+
+            </div>
+
+            <!-- Availability -->
+
+            <div class="input-group">
+
+                <label>Available for Work</label>
+
+                <select id="available">
+
+                    <option value="true">Available</option>
+
+                    <option value="false">Not Available</option>
+
+                </select>
+
+            </div>
+
+            <!-- Location -->
+
+            <div class="input-group">
+
+                <label>Current Location</label>
+
+                <button
+                    type="button"
+                    id="locationBtn">
+
+                    📍 Use Current Location
+
+                </button>
+
+                <p id="locationStatus">
+
+                    Location not selected
+
+                </p>
+
+            </div>
+
+            <!-- Submit -->
+
+            <button
+                type="submit"
+                id="submitBtn">
+
+                Complete Registration
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="worker-register.js"></script>
+
+</body>
+
+</html>

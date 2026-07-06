@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabourLink - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <h1>LabourLink</h1>
+
+        <p>
+            Connecting Skilled Workers with People who need them.
+        </p>
+
+    </div>
+
+    <div class="right">
+
+        <div class="card">
+
+            <h2>Welcome Back 👋</h2>
+
+            <p>Login to continue</p>
+
+            <form id="loginForm">
+
+                <div class="phone-container">
+
+                    <span class="country-code">+91</span>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter 10-digit mobile number"
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                        required
+                    >
+
+                </div>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <!-- Forgot Password -->
+                <div class="forgot-password">
+                    <a href="forgot-password.html" id="forgotPassword">
+                        Forgot Password?
+                    </a>
+                </div>
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <div class="register">
+
+                Don't have an account?
+
+                <span id="registerBtn">
+                    Register
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>

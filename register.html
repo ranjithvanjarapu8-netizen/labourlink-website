@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LabourLink - Register</title>
+
+    <link rel="stylesheet" href="register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <h1>Join LabourLink</h1>
+
+        <p>
+            Create your account and connect with thousands of workers and employers.
+        </p>
+
+    </div>
+
+    <div class="right">
+
+        <div class="card">
+
+            <h2>Create Account</h2>
+
+            <p>Register to continue</p>
+
+            <form id="registerForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Mobile Number"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required
+                >
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+            <div class="login">
+
+                Already have an account?
+
+                <span id="loginBtn">
+                    Login
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- OTP Popup -->
+
+<div id="otpPopup" class="otp-popup">
+
+    <div class="otp-card">
+
+        <h2>Verify Mobile Number</h2>
+
+        <p id="otpText">
+            OTP has been sent
+        </p>
+
+        <input
+            type="text"
+            id="otp"
+            maxlength="6"
+            placeholder="Enter OTP"
+        >
+
+        <button id="verifyOtpBtn">
+            Verify OTP
+        </button>
+
+        <p id="resendOtp">
+            Resend OTP
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Firebase reCAPTCHA -->
+
+<div id="recaptcha-container"></div>
+
+<!-- Firebase SDK -->
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+
+<script>
+
+const firebaseConfig = {
+
+    apiKey: "AIzaSyCOvR-_fM3JtGS_Pcr_XRH7H5cZyPWAOGM",
+
+    authDomain: "labourlink-bc976.firebaseapp.com",
+
+    projectId: "labourlink-bc976",
+
+    storageBucket: "labourlink-bc976.firebasestorage.app",
+
+    messagingSenderId: "213119642671",
+
+    appId: "1:213119642671:web:9c4955ad6d4b8bb2352ada"
+
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+
+</script>
+
+<script src="register.js"></script>
+
+</body>
+
+</html>

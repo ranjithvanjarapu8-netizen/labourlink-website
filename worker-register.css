@@ -1,0 +1,315 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    background:#f3f6fb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:30px 0;
+
+}
+
+.container{
+
+    width:500px;
+
+    max-width:95%;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.container h1{
+
+    text-align:center;
+
+    color:#1f2937;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    margin-bottom:30px;
+
+    font-size:15px;
+
+}
+
+/* ---------------- Profile Photo ---------------- */
+
+.photo-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+#photoPreview{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid #2563eb;
+
+    margin-bottom:15px;
+
+    background:#e5e7eb;
+
+}
+
+.upload-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.upload-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ---------------- Inputs ---------------- */
+
+.input-group{
+
+    margin-bottom:20px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group textarea,
+.input-group select{
+
+    width:100%;
+
+    padding:12px 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    background:white;
+
+}
+
+.input-group textarea{
+
+    resize:vertical;
+
+    min-height:100px;
+
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 5px rgba(37,99,235,.3);
+
+}
+
+/* ---------------- Profession ---------------- */
+
+.checkbox-group{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+    background:#f9fafb;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #d1d5db;
+
+}
+
+.checkbox-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    margin:0;
+
+}
+
+.checkbox-group input{
+
+    width:auto;
+
+}
+
+/* ---------------- Location ---------------- */
+
+#locationBtn{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+#locationBtn:hover{
+
+    background:#1d4ed8;
+
+}
+
+#locationStatus{
+
+    margin-top:10px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:#555;
+
+}
+
+/* ---------------- Submit ---------------- */
+
+#submitBtn{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:15px;
+
+    border:none;
+
+    background:#16a34a;
+
+    color:white;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#submitBtn:hover{
+
+    background:#15803d;
+
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media(max-width:600px){
+
+    .container{
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+    .checkbox-group{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

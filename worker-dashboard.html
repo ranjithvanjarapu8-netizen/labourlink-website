@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>LabourLink | Incoming Requests</title>
+
+    <link rel="stylesheet"
+          href="worker-dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-helmet-safety"></i>
+
+            <span>LabourLink</span>
+
+        </div>
+
+        <div class="profile-menu">
+
+            <button id="profileBtn">
+
+                <i class="fa-solid fa-user"></i>
+
+            </button>
+
+            <div class="dropdown">
+
+                <a href="worker-profile.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    My Profile
+
+                </a>
+
+                <a href="worker-requests.html">
+
+                    <i class="fa-solid fa-inbox"></i>
+
+                    Incoming Requests
+
+                </a>
+
+                <a href="worker-accepted.html">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Accepted Jobs
+
+                </a>
+
+                <a href="worker-completed.html">
+
+                    <i class="fa-solid fa-square-check"></i>
+
+                    Completed Jobs
+
+                </a>
+
+                <hr>
+
+                <a href="#" id="logoutBtn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="page-header">
+        <div class="back-container">
+
+            <button class="back-btn" onclick="history.back()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back
+
+            </button>
+
+        </div>
+
+        <div class="header-content">
+
+            <h1>
+
+                <i class="fa-solid fa-inbox"></i>
+
+                Incoming Work Requests
+
+            </h1>
+
+            <p>
+
+                Review and respond to work requests sent by owners near you.
+
+            </p>
+
+        </div>
+
+        <div class="request-summary">
+
+            <div class="summary-card">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <div>
+
+                    <h2 id="requestCount">0</h2>
+
+                    <span>Pending Requests</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= REQUEST LIST ================= -->
+
+    <main class="container">
+
+        <div id="requestContainer">
+
+            <!-- Cards will be loaded dynamically -->
+
+            <!-- Example
+
+            <div class="request-card">
+
+                <div class="request-left">
+
+                    <div class="card-title">
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                        <h2>House Wiring</h2>
+
+                    </div>
+
+                    <p>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <strong>Owner:</strong> Ramesh
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        <strong>Profession:</strong> Electrician
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        <strong>Date:</strong> 02 Jul 2026
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <strong>Distance:</strong> 2.5 km
+
+                    </p>
+
+                </div>
+
+                <div class="request-right">
+
+                    <button class="view-btn">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            -->
+
+        </div>
+
+        <!-- Empty State -->
+
+        <div id="emptyState" style="display:none;">
+
+            <div class="empty-card">
+
+                <i class="fa-regular fa-folder-open"></i>
+
+                <h2>No Incoming Requests</h2>
+
+                <p>
+
+                    New work requests from owners will appear here.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="worker-dashboard.js"></script>
+
+</body>
+
+</html>

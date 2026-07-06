@@ -1,0 +1,446 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#F8FAFC;
+
+    color:#1F2937;
+
+    min-height:100vh;
+
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+    width:100%;
+
+    height:80px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 70px;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#2563EB;
+
+}
+
+.logo i{
+
+    font-size:30px;
+
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/* ================= PROFILE ================= */
+
+.profile-menu{
+
+    position:relative;
+
+}
+
+.profile-btn{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#EEF4FF;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    color:#2563EB;
+
+    transition:.3s;
+
+}
+
+.profile-btn:hover{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+.dropdown{
+
+    position:absolute;
+
+    right:0;
+
+    top:65px;
+
+    width:220px;
+
+    background:white;
+
+    border-radius:16px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+    display:none;
+
+    overflow:hidden;
+
+}
+
+.dropdown{
+
+    display:none;
+
+}
+
+.dropdown.show{
+
+    display:block;
+
+    animation:fadeIn .25s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.dropdown a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 20px;
+
+    color:#374151;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.dropdown a:hover{
+
+    background:#EEF4FF;
+
+    color:#2563EB;
+
+}
+
+.dropdown button{
+
+    width:100%;
+
+    border:none;
+
+    background:white;
+
+    cursor:pointer;
+
+    padding:16px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:15px;
+
+    color:#EF4444;
+
+    transition:.3s;
+
+}
+
+.dropdown button:hover{
+
+    background:#FEE2E2;
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    text-align:center;
+
+    padding:70px 20px 40px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    color:#111827;
+
+    margin-bottom:15px;
+
+}
+
+.hero p{
+
+    color:#6B7280;
+
+    font-size:18px;
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:30px;
+
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+
+    max-width:1100px;
+
+    margin:40px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    padding:20px;
+
+}
+
+.service-card{
+
+    width:430px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 50px rgba(37,99,235,.15);
+
+}
+
+.icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:18px;
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:30px;
+
+}
+
+.work{
+
+    background:#DCFCE7;
+
+    color:#16A34A;
+
+}
+
+.service-card h2{
+
+    font-size:30px;
+
+    margin-bottom:18px;
+
+    color:#1F2937;
+
+}
+
+.service-card p{
+
+    color:#6B7280;
+
+    line-height:30px;
+
+    margin-bottom:35px;
+
+}
+
+.service-card button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2563EB;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.service-card button:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+}
+
+.service-card button i{
+
+    margin-left:8px;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    margin-top:80px;
+
+    text-align:center;
+
+    color:#94A3B8;
+
+    padding-bottom:40px;
+
+    font-size:15px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.navbar{
+
+    padding:20px;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.service-card{
+
+    width:100%;
+
+}
+
+.cards{
+
+    padding:20px;
+
+}
+
+}

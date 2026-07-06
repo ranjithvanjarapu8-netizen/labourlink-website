@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>LabourLink | Completed Jobs</title>
+
+    <link rel="stylesheet"
+          href="worker-completed.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-helmet-safety"></i>
+
+            <span>LabourLink</span>
+
+        </div>
+
+        <div class="profile-menu">
+
+            <button id="profileBtn">
+
+                <i class="fa-solid fa-user"></i>
+
+            </button>
+
+            <div class="dropdown">
+
+                <a href="worker-profile.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    My Profile
+
+                </a>
+
+                <a href="worker-requests.html">
+
+                    <i class="fa-solid fa-inbox"></i>
+
+                    Incoming Requests
+
+                </a>
+
+                <a href="worker-accepted.html">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Accepted Jobs
+
+                </a>
+
+                <a href="worker-completed.html">
+
+                    <i class="fa-solid fa-square-check"></i>
+
+                    Completed Jobs
+
+                </a>
+
+                <hr>
+
+                <a href="#" id="logoutBtn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <div class="header-content">
+
+            <h1>
+
+                <i class="fa-solid fa-square-check"></i>
+
+                Completed Jobs
+
+            </h1>
+
+            <p>
+
+                View your completed work history and previous jobs.
+
+            </p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <i class="fa-solid fa-trophy"></i>
+
+            <div>
+
+                <h2 id="completedCount">0</h2>
+
+                <span>Completed Jobs</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= COMPLETED JOBS ================= -->
+
+    <main class="container">
+
+        <div id="completedList">
+
+            <!-- Loaded dynamically -->
+
+        </div>
+
+        <!-- Empty State -->
+
+        <div id="emptyState" style="display:none;">
+
+            <div class="empty-card">
+
+                <i class="fa-regular fa-folder-open"></i>
+
+                <h2>No Completed Jobs</h2>
+
+                <p>
+
+                    Once you complete work requests, they'll appear here.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="worker-completed.js"></script>
+
+</body>
+
+</html>

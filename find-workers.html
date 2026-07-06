@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Nearby Workers</title>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet"
+          href="find-workers.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Top Navigation -->
+
+        <div class="top-bar">
+
+            <button class="back-btn" onclick="goBack()">
+                ← Back
+            </button>
+
+            <h1>Nearby Workers</h1>
+
+            <div class="top-buttons">
+
+                <button id="ownerRequestsBtn">
+                    📋 My Requests
+                </button>
+
+                <button id="viewWagesBtn">
+                    💰 Wage Guide
+                </button>
+
+                <button class="logout-btn"
+                        onclick="logout()">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Search Summary -->
+
+        <div class="search-summary">
+
+            <div class="summary-item">
+                <span class="label">Profession</span>
+                <span id="selectedProfession">-</span>
+            </div>
+
+            <div class="summary-item">
+                <span class="label">Work Date</span>
+                <span id="selectedDate">-</span>
+            </div>
+
+            <div class="summary-item">
+                <span class="label">Location</span>
+                <span id="selectedLocation">-</span>
+            </div>
+
+            <button id="changeSearchBtn">
+                Change Search
+            </button>
+
+        </div>
+
+        <!-- Map -->
+
+        <div id="map"></div>
+
+        <!-- Results -->
+
+        <h2 class="results-title">
+            Available Workers
+        </h2>
+
+        <div id="workerList"></div>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="find-workers.js"></script>
+
+</body>
+
+</html>
