@@ -49,10 +49,13 @@ body{
     font-weight:bold;
 
 }
+.logo-img{
 
-.logo i{
+    width:50px;
 
-    font-size:30px;
+    height:50px;
+
+    object-fit:contain;
 
 }
 

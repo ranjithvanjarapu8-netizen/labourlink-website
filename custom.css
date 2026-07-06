@@ -444,3 +444,17 @@ footer{
 }
 
 }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:28px;
+    font-weight:700;
+    color:#2563EB;
+}
+
+.logo img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+}

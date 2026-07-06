@@ -440,3 +440,9 @@ button:active{
 }
 
 }
+.login-logo{
+    width:120px;
+    height:auto;
+    margin-bottom:25px;
+    z-index:2;
+}
