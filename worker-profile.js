@@ -132,7 +132,7 @@ function displayProfile(worker) {
     // Profile Photo
     // ===============================
 
-    const image = document.getElementById("profilePhoto");
+    const image = document.getElementById("workerPhoto");
 
     if (worker.profilePhoto && worker.profilePhoto.trim() !== "") {
 
