@@ -121,18 +121,18 @@ function displayWorker(worker) {
 
     const image =
         document.getElementById("profilePhoto");
-
     if (worker.profilePhoto) {
 
-        image.src =
-            `https://labourlink-2v5e.onrender.com/uploads/workers/${worker.profilePhoto}`;
+        if (worker.profilePhoto.startsWith("http")) {
+            image.src = worker.profilePhoto;
+        } else {
+            image.src =
+                `https://labourlink-2v5e.onrender.com/uploads/workers/${worker.profilePhoto}`;
+        }
 
-    }
+    } else {
 
-    else {
-
-        image.src =
-            "images/default-user.png";
+        image.src = "images/default-user.png";
 
     }
 
