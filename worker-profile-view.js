@@ -119,23 +119,17 @@ function displayWorker(worker) {
 
     
 
-    const image =
-        document.getElementById("profilePhoto");
-    if (worker.profilePhoto) {
+   const image = document.getElementById("profilePhoto");
 
-        if (worker.profilePhoto.startsWith("http")) {
-            image.src = worker.profilePhoto;
-        } else {
-            image.src =
-                `https://labourlink-2v5e.onrender.com/uploads/workers/${worker.profilePhoto}`;
-        }
+    if (worker.profilePhoto && worker.profilePhoto.trim() !== "") {
+
+        image.src = worker.profilePhoto;
 
     } else {
 
-        image.src = "images/default-user.png";
+        image.src = "https://res.cloudinary.com/mrjpk64t/image/upload/v1783926656/default_worker.jpg";
 
     }
-
     const professions =
         worker.professions || [];
 
