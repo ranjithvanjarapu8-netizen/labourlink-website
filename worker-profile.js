@@ -132,20 +132,15 @@ function displayProfile(worker) {
     // Profile Photo
     // ===============================
 
-    const image =
-        document.getElementById("workerPhoto");
+    const image = document.getElementById("profilePhoto");
 
-    if (worker.profilePhoto) {
+    if (worker.profilePhoto && worker.profilePhoto.trim() !== "") {
 
-        image.src =
-            `https://labourlink-2v5e.onrender.com/uploads/workers/${worker.profilePhoto}`;
+        image.src = worker.profilePhoto;
 
-    }
+    } else {
 
-    else {
-
-        image.src =
-            "images/default-user.png";
+        image.src = "https://res.cloudinary.com/mrjpk64t/image/upload/v1783926656/default_worker.jpg";
 
     }
 

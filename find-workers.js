@@ -112,10 +112,9 @@ function displayWorkers(workers) {
 
     workers.forEach(worker => {
 
-        const image = worker.profilePhoto
-            ? `https://labourlink-2v5e.onrender.com/uploads/workers/${worker.profilePhoto}`
-            : "images/default-user.png";
-
+        const image = worker.profilePhoto && worker.profilePhoto.trim() !== ""
+            ? worker.profilePhoto
+            : "https://res.cloudinary.com/mrjpk64t/image/upload/v1783926656/default_worker.jpg";
         workerList.innerHTML += `
 
             <div class="worker-card">
